@@ -1,6 +1,6 @@
 class Stack:
     def __init__(self):
-        '''this function is constracter to the class Stack'''
+        '''this function is constructor to the class Stack'''
         self.elements = []
         self.length = 0
     
