@@ -44,6 +44,13 @@ class Stack:
         #Space complexity is o(1)
         return self.length
     
+    def clear(self):
+        '''this function remove all element in stack'''
+        #Time Complexity is O(1)
+        #Space complexity is o(1)
+        self.length = 0
+        self.elements = []
+    
     def __str__(self):
         '''this function for human-readable representation'''
         #Time Complexity is O(1)
