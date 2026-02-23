@@ -1,4 +1,4 @@
-# 🧠 python Data Structure Algorithms 
+# 🧠 Python Data Structure Algorithms 
 
 A from-scratch implementation of a **stack** in Python.
 
@@ -15,7 +15,7 @@ This project is designed to strengthen understanding of:
 ---
 
 ## 📦 Project Structure
-
+```bash
 dsa-python/
 ├── arrays/
 ├── linked_lists/
