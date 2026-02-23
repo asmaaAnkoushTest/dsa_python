@@ -60,4 +60,3 @@ class Stack:
             string = string + "^\n"
             string = string + f"{self.elements[i]}\n"
         return string
-    
