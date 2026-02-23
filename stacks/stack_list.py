@@ -29,6 +29,15 @@ class Stack:
         #Space complexity is o(1)
         return self.elements[-1]
     
+    def is_empty(self) -> bool:
+        '''this function check if the stack is empty or not'''
+        #Time Complexity is O(1)
+        #Space complexity is o(1)
+        if self.length == 0:
+            return True
+        else:
+            return False
+    
     def __str__(self):
         '''this function for human-readable representation'''
         #Time Complexity is O(1)
