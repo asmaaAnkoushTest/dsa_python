@@ -30,6 +30,16 @@ def test_pop():
     poped_element = stack.pop()
     assert poped_element == 30
     assert stack.length == 2
-    
+
     with pytest.raises(IndexError):
         poped_element = empty_satck.pop()
+
+def test_peek():
+    stack: Stack = Stack()
+    stack.push(10)
+    stack.push(20)
+    stack.push(30)
+    top_element = stack.peek()
+
+    assert top_element == 30
+    assert stack.length == 3
