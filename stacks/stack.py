@@ -13,24 +13,16 @@ class Stack:
     def push(self, data):
         '''this function add data in the top of stack: node point to old top and then updata top'''
         #Time Complexity is O(1)
+        #Space complexity is o(1)
         node: Node = Node (data)
         node.next = self.top
         self.top = node
         self.length += 1
-    
-    def __str__(self):
-        '''this function for human-readable representation"'''
-        current_top = self.top
-        string: str = "\n"
-        while current_top:
-            string = string + f"{current_top.value}\n"
-            string = string + "^\n"
-            current_top = current_top.next
-        return string
 
     def pop (self):
         '''this function remove and return the top element in stack'''
         #Time Complexity is O(1)
+        #Space complexity is o(1)
         if self.top == None:
             raise IndexError ("The Stack is Empty")
         else:
@@ -42,6 +34,7 @@ class Stack:
     def peek(self):
         '''this function return the top element in stack'''
         #Time Complexity is O(1)
+        #Space complexity is o(1)
         if self.top == None:
             raise IndexError ("The Stack is Empty")
         else:
@@ -51,6 +44,7 @@ class Stack:
     def is_empty(self) -> bool:
         '''this function check if the stack is empty or not'''
         #Time Complexity is O(1)
+        #Space complexity is o(1)
         if self.top == None:
             return True
         else:
@@ -59,9 +53,22 @@ class Stack:
     def size(self) -> int:
         '''this function return the size of stack'''
         #Time Complexity is O(1)
+        #Space complexity is o(1)
         return self.length
 
     def clear(self):
         '''this function remove all element in stack'''
+        #Time Complexity is O(1)
+        #Space complexity is o(1)
         self.length = 0
         self.top = None
+    
+    def __str__(self):
+        '''this function for human-readable representation'''
+        current_top = self.top
+        string: str = ""
+        while current_top:
+            string = string + "^\n"
+            string = string + f"{current_top.value}\n"
+            current_top = current_top.next
+        return string
