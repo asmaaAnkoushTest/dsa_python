@@ -38,6 +38,12 @@ class Stack:
         else:
             return False
     
+    def size(self) -> int:
+        '''this function return the size of stack'''
+        #Time Complexity is O(1)
+        #Space complexity is o(1)
+        return self.length
+    
     def __str__(self):
         '''this function for human-readable representation'''
         #Time Complexity is O(1)
