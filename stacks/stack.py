@@ -46,3 +46,10 @@ class Stack:
         else:
             peeked_data = self.top.value
             return peeked_data
+
+    def is_empty(self) -> bool:
+        '''this function check if the stack is empty or not'''
+        if self.top == None:
+            return True
+        else:
+            return False
