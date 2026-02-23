@@ -60,3 +60,8 @@ class Stack:
         '''this function return the size of stack'''
         #Time Complexity is O(1)
         return self.length
+
+    def clear(self):
+        '''this function remove all element in stack'''
+        self.length = 0
+        self.top = None
