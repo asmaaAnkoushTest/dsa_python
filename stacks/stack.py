@@ -16,3 +16,12 @@ class Stack:
         node.next = self.top
         self.top = node
         self.length += 1
+    
+    def __str__(self):
+        current_top = self.top
+        string: str = "\n"
+        while current_top != -1:
+            string = string + f"{current_top.value}\n"
+            string = string + "^\n"
+            current_top = current_top.next
+        return string
