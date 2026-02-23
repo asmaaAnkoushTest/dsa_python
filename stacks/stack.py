@@ -8,7 +8,7 @@ class Stack:
     def __init__(self):
         '''this function is constracter to the class Stack'''
         self.top = None
-        self.length = 0
+        self.length: int = 0
 
     def push(self, data):
         '''this function add data in the top of stack: node point to old top and then updata top'''
@@ -41,6 +41,7 @@ class Stack:
         
     def peek(self):
         '''this function return the top element in stack'''
+        #Time Complexity is O(1)
         if self.top == None:
             raise IndexError ("The Stack is Empty")
         else:
@@ -49,7 +50,13 @@ class Stack:
 
     def is_empty(self) -> bool:
         '''this function check if the stack is empty or not'''
+        #Time Complexity is O(1)
         if self.top == None:
             return True
         else:
             return False
+    
+    def size(self) -> int:
+        '''this function return the size of stack'''
+        #Time Complexity is O(1)
+        return self.length
