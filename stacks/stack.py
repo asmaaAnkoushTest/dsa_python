@@ -19,7 +19,7 @@ class Stack:
         self.length += 1
     
     def __str__(self):
-        ''''this function for human-readable representation"'''
+        '''this function for human-readable representation"'''
         current_top = self.top
         string: str = "\n"
         while current_top:
@@ -29,7 +29,7 @@ class Stack:
         return string
 
     def pop (self):
-        ''''this function remove and return the top element in stack'''
+        '''this function remove and return the top element in stack'''
         #Time Complexity is O(1)
         if self.top == None:
             raise IndexError ("The Stack is Empty")
@@ -38,3 +38,11 @@ class Stack:
             self.top = self.top.next
             self.length -= 1
             return poped_data
+        
+    def peek(self):
+        '''this function return the top element in stack'''
+        if self.top == None:
+            raise IndexError ("The Stack is Empty")
+        else:
+            peeked_data = self.top.value
+            return peeked_data
