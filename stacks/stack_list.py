@@ -23,6 +23,12 @@ class Stack:
             self.length -= 1
             return poped_element
     
+    def peek(self):
+        '''this function return the top element in stack'''
+        #Time Complexity is O(1)
+        #Space complexity is o(1)
+        return self.elements[-1]
+    
     def __str__(self):
         '''this function for human-readable representation'''
         #Time Complexity is O(1)
@@ -32,3 +38,4 @@ class Stack:
             string = string + "^\n"
             string = string + f"{self.elements[i]}\n"
         return string
+    
