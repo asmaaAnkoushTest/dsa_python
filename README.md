@@ -1,6 +1,6 @@
-# 🧠 Python Singly Linked List
+# 🧠 python Data Structure Algorithms 
 
-A from-scratch implementation of a **singly linked list** in Python.
+A from-scratch implementation of a **stack** in Python.
 
 This project is designed to strengthen understanding of:
 
@@ -10,9 +10,22 @@ This project is designed to strengthen understanding of:
 - Object-oriented design
 - Test-driven development (TDD)
 - Professional Git workflow
+- support FILO 
 
 ---
 
 ## 📦 Project Structure
+
+dsa-python/
+├── arrays/
+├── linked_lists/
+├── stacks/
+├── queues/
+├── trees/
+├── graphs/
+├── heaps/
+├── dynamic_programming/
+├── utils/           # helper functions, test helpers
+└── README.md
 
 ```
