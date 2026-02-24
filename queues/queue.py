@@ -36,6 +36,14 @@ class Queue:
         if self.head is None:
             self.tail = None
 
+    def front(self):
+        '''this function returnes the element in the head of queue'''
+        #Time Complexity O(1)
+        #Space complexity O(1)
+        if self.head == None:
+            raise IndexError ("The Queue is Empty")
+        return self.head.value
+
     def __str__(self):
         '''this function for human-readable representation'''
         #Time Complexity O(n)
