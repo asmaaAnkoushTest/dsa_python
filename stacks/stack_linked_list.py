@@ -19,7 +19,7 @@ class Stack:
     
     def peek(self):
         '''this function return the top element in stack'''
-        #Time Complexity is O(n^2)
+        #Time Complexity is O(n)
         #Space complexity is o(1)
         element = self.elments.remove_at(self.elments.length-1)
         self.elments.append_end(element)
