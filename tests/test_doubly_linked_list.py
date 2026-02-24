@@ -8,6 +8,14 @@ def test_double_linked_list_creation():
     assert node.next is None
     assert node.prev is None
 
-    ll: DoublyLinkedList = DoublyLinkedList()
-    assert ll.head is None
-    assert ll.length == 0
+    dll: DoublyLinkedList = DoublyLinkedList()
+    assert dll.head is None
+    assert dll.length == 0
+
+def test_insert_at_head():
+    dll: DoublyLinkedList = DoublyLinkedList()
+    dll.insert_at_head(10)
+    dll.insert_at_head(5)
+
+    assert dll.head.value is 5
+    assert dll.length == 2
