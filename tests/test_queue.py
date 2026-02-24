@@ -21,3 +21,19 @@ def test_enqueue():
     assert queue.head.value == 10
     assert queue.tail.value == 30
     assert queue.length == 3
+
+def test_dequeue():
+    queue: Queue = Queue()
+    empty_queue: Queue = Queue()
+    queue.enqueue(10)
+    queue.enqueue(20)
+    queue.enqueue(30)
+    assert queue.length == 3
+    assert queue.head.value == 10
+    assert queue.tail.value == 30
+    queue.dequeue()
+    assert queue.length == 2
+    assert queue.head.value == 20
+    assert queue.tail.value == 30
+    with pytest.raises(IndexError):
+        empty_queue.dequeue()
