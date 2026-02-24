@@ -24,6 +24,18 @@ class Queue:
             self.tail = node
         self.length += 1
     
+    def dequeue(self):
+        '''this function removes from the front'''
+        #Time Complexity O(1)
+        #Space complexity O(1)
+        if self.head == None:
+            raise IndexError ("The Queue is Empty")
+        else:
+            self.head = self.head.next
+            self.length -= 1
+        if self.head is None:
+            self.tail = None
+
     def __str__(self):
         '''this function for human-readable representation'''
         #Time Complexity O(n)
@@ -36,5 +48,5 @@ class Queue:
             current_head = current_head.next
         string = string + " <- tail"
         return string
-
+    
 
