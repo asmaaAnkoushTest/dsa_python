@@ -20,5 +20,13 @@ class Queue:
         else:
             self.elements.remove(self.elements[0])
             self.length -= 1
+    
+    def front(self):
+        '''this function returnes the element in the head of queue'''
+        #Time Complexity O(1)
+        #Space complexity O(1)
+        if self.length == 0:
+            raise IndexError ("The Queue is Empty")
+        return self.elements[0]
 
 
