@@ -1,16 +1,7 @@
 # 🧠 Python Data Structure Algorithms 
 
-A from-scratch implementation of a **stack** in Python.
-
-This project is designed to strengthen understanding of:
-
-- Data structures
-- Pointers (references)
-- Algorithmic thinking
-- Object-oriented design
-- Test-driven development (TDD)
-- Professional Git workflow
-- support FILO 
+# first from-scratch implementation of a **stack** in Python.
+- apply FIFO 
 
 ---
 
@@ -25,7 +16,7 @@ dsa-python/
 ├── graphs/
 ├── heaps/
 ├── dynamic_programming/
-├── utils/           # helper functions, test helpers
+├── utils/
 └── README.md
 
 ```
