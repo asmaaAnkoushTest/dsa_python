@@ -44,6 +44,9 @@ class Queue:
             raise IndexError ("The Queue is Empty")
         return self.head.value
 
+    def size(self) -> int:
+        return self.length
+
     def __str__(self):
         '''this function for human-readable representation'''
         #Time Complexity O(n)
@@ -56,5 +59,3 @@ class Queue:
             current_head = current_head.next
         string = string + " <- tail"
         return string
-    
-
