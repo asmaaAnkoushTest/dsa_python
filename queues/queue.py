@@ -45,8 +45,19 @@ class Queue:
         return self.head.value
 
     def size(self) -> int:
+        '''this function return the size of queue'''
+        #Time Complexity is O(1)
+        #Space complexity is o(1)
         return self.length
 
+    def clear(self):
+        '''this function remove all element in queue'''
+        #Time Complexity is O(1)
+        #Space complexity is o(1)
+        self.head = None
+        self.tail = None
+        self.length = 0
+    
     def __str__(self):
         '''this function for human-readable representation'''
         #Time Complexity O(n)
