@@ -6,8 +6,19 @@ class Queue:
 
     def enqueue(self, data):
         '''this function add data to the end'''
-        #Time Complexity O(1)
-        #Space complexity O(1)
+        #Time Complexity is O(1), o(n) if list resized
+        #Space complexity is o(1), o(n) if list resized
         self.elements.append(data)
         self.length += 1
     
+    def dequeue(self):
+        '''this function removes from the front'''
+        #Time Complexity O(1)
+        #Space complexity O(1)
+        if self.elements == []:
+            raise IndexError ("The Stack is Empty")
+        else:
+            self.elements.remove(self.elements[0])
+            self.length -= 1
+
+
