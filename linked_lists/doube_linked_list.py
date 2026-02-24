@@ -7,7 +7,7 @@ class Node:
 
 class DoubleLinkedList:
     def __init__(self):
-        '''this function is constructor to the class Node'''
+        '''this function is constructor to the class Double Linked List'''
         self.head = None
         self.length = 0
         
