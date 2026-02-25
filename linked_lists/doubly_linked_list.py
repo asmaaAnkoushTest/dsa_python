@@ -81,7 +81,7 @@ class DoublyLinkedList:
             return False
         
     def get_at(self, index):
-        '''this function return the value in the index'''
+        '''this function return the value in the given index'''
         #Time complexity = O(n)
         #Space complexity = O(1)
         if self.length <= index or index < 0:
@@ -96,17 +96,31 @@ class DoublyLinkedList:
                 return current.value
     
     def print_forward(self):
+        '''this function print double linked list from head to tail'''
+        #Time complexity = O(1)
+        #Space complexity = O(1)
         current: DoublyNode = self.head
-        string: str = ""
+        string: str = "head ->"
         while current:
-            string = string + f"{current.value} <-> "
+            string = string + f"{current.value} -> "
             current = current.next
-        string = string + "None"
+        string = string + "tail"
+        print(string)
+     
+    def print_backward(self):
+        '''this function print double linked list from tail to head'''
+        #Time complexity = O(1)
+        #Space complexity = O(1)
+        current: DoublyNode = self.tail
+        string: str = "tail <-"
+        while current:
+            string = string + f"{current.value} <- "
+            current = current.prev
+        string = string + "head"
         print(string)
 
-
-
-            
-
-    # def delete(self,data):
-
+    def length(self) -> int:
+        '''this function return the length of double linked list'''
+        #Time complexity = O(1)
+        #Space complexity = O(1)
+        return self.length
