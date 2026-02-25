@@ -65,9 +65,9 @@ class DoublyLinkedList:
             node.next = current.next
             current.next = node
             self.length += 1
-            
+
     def containes(self, data) -> bool:
-        '''this function check if a value exists in the linked list or not'''
+        '''this function check if a value exists in the double linked list or not'''
         #Time complexity = O(n)
         #Space complexity = O(1)
         current: DoublyNode = self.head
@@ -79,5 +79,34 @@ class DoublyLinkedList:
                     return True
                 current = current.next
             return False
+        
+    def get_at(self, index):
+        '''this function return the value in the index'''
+        #Time complexity = O(n)
+        #Space complexity = O(1)
+        if self.length <= index or index < 0:
+            raise IndexError("Index Out Of Range")
+        else:
+            current: DoublyNode = self.head
+            i: int = 0 
+            while i < index :
+                current = current.next
+                i += 1
+            else:
+                return current.value
+    
+    def print_forward(self):
+        current: DoublyNode = self.head
+        string: str = ""
+        while current:
+            string = string + f"{current.value} <-> "
+            current = current.next
+        string = string + "None"
+        print(string)
+
+
+
+            
+
     # def delete(self,data):
 
