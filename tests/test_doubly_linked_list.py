@@ -66,3 +66,10 @@ def test_get_at():
     dll.insert_at(1, 15)
     assert dll.get_at(1) is 15
 
+def test_delete():
+    dll: DoublyLinkedList = DoublyLinkedList()
+    dll.insert_at_head(10)
+    dll.insert_at_head(5)
+    dll.insert_at_tail(20)
+    assert dll.delete(20) is True
+    assert dll.delete(50) is False
